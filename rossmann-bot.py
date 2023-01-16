@@ -17,6 +17,9 @@ TOKEN= '5852728055:AAFLdMnsRRQxsRDKqcECoDwb_fKJMPitl6M'
 # send message
 #https://api.telegram.org/bot5852728055:AAFLdMnsRRQxsRDKqcECoDwb_fKJMPitl6M/sendMessage?chat_id=1645268127&text=oi
 
+# render
+#https://api.telegram.org/bot5852728055:AAFLdMnsRRQxsRDKqcECoDwb_fKJMPitl6M/setWebhook?url=https://telegram-bot-api-9mto.onrender.com
+
 def send_message( chat_id, text ):
     # send message
     url = f'https://api.telegram.org/bot{TOKEN}/'
@@ -109,7 +112,7 @@ def index():
 
             else:
                 send_message( chat_id, 'Store ID is not Available' )
-                return Responde( 'Ok', status=200 )
+                return Response( 'Ok', status=200 )
 
         else:
             send_message( chat_id, 'Store ID is Wrong' )
