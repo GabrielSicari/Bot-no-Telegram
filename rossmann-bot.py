@@ -108,7 +108,7 @@ def index():
                     d2['prediction'].values[0] )
 
                 send_message( chat_id, msg )
-                return Responde( 'Ok', status=200 )
+                return Response( 'Ok', status=200 )
 
             else:
                 send_message( chat_id, 'Store ID is not Available' )
