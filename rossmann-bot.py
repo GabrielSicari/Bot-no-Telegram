@@ -79,7 +79,7 @@ def parse_message( message ):
         store_id = int(store_id)
 
     except ValueError:
-        send_message( chat_id, 'Store ID not Available' )
+        store_id = 'error'
     return chat_id, store_id
 
 # init api
@@ -115,7 +115,7 @@ def index():
                 return Response( 'Ok', status=200 )
 
         else:
-            #send_message( chat_id, 'Store ID is Wrong' )
+            send_message( chat_id, 'Store ID is Wrong' )
             return Response( 'Ok', status=200 )
     else:
         return '<h1> Rossmann Telegram Bot </h1>'
